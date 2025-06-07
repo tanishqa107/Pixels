@@ -10,7 +10,7 @@ const YourPins: React.FC = () => {
 
     if (username) {
       axios
-        .get(`http://localhost:3000/api/v1/user-pins/${username}`)
+        .get(`https://pixels-2umr.onrender.com/api/v1/user-pins/${username}`)
         .then((res) => setPins(res.data.pins))
         .catch((err) => console.error("Error fetching pins", err));
     }

@@ -48,7 +48,7 @@ const CreatePin: React.FC = () => {
      formData.append("username", username);
 
     try {
-      const res = await axios.post("http://localhost:3000/api/v1/store-content", formData, {
+      const res = await axios.post("https://pixels-2umr.onrender.com/api/v1/store-content", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

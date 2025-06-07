@@ -32,7 +32,7 @@ const Home: React.FC = () => {
  const fetchImages = useCallback(async () => {
   setIsLoading(true);
   try {
-    const res = await axios.get(`http://localhost:3000/api/pexels?page=${page}`);
+    const res = await axios.get(`https://pixels-2umr.onrender.com/api/pexels?page=${page}`);
     setImages((prev) => {
       const combined = [...prev, ...res.data.photos];
       const uniqueMap = new Map<number, Content>();

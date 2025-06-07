@@ -28,7 +28,7 @@ const Messaging = () => {
     const fetchUsers = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/get-users");
+        const res = await axios.get("https://pixels-2umr.onrender.com/api/v1/get-users");
         setUsers(res.data.users);
       } catch (err) {
         console.error("Error fetching users:", err);
@@ -42,7 +42,7 @@ const Messaging = () => {
 
   // Setup WebSocket connection once
   useEffect(() => {
-    socket.current = new WebSocket("ws://localhost:3000");
+    socket.current = new WebSocket("ws://pixels-2umr.onrender.com");
 
     socket.current.onmessage = (event) => {
       try {
@@ -81,7 +81,7 @@ const Messaging = () => {
       setLoading(true);
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/v1/messages/${currentUser}/${selectedUser}`
+          `https://pixels-2umr.onrender.com/api/v1/messages/${currentUser}/${selectedUser}`
         );
         setMessages(res.data.messages);
       } catch (err) {

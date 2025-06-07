@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:3000/api/create-username", { username });
+      const response = await axios.post("https://pixels-2umr.onrender.com/api/create-username", { username });
       if(response.status === 201){
         navigate("/homepage")
         localStorage.setItem("username2",username);
